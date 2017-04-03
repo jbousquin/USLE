@@ -298,3 +298,9 @@ for (name in lst.Name){
   write.csv(ScenarioResults(WatershedSpecificResults(paste(name,sep=""))), paste(name, "_Scenarios_output.csv", sep=""))
 }
 
+#new data grab functionality
+tmp = tempfile()
+url = "http://fargo.nserl.purdue.edu/RUSLE2_ftp/Climate_data/RI clim011603.zip"
+download.file(url, tmp, mode = "wb")
+fgdb = unzip(tmp)
+
